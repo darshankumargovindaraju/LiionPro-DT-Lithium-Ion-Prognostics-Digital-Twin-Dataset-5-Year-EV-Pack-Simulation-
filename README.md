@@ -1,0 +1,2 @@
+# LiionPro-DT-Lithium-Ion-Prognostics-Digital-Twin-Dataset-5-Year-EV-Pack-Simulation-
+LiionPro-DT is a high-fidelity synthetic lithium-ion battery digital twin dataset simulating five years of 1-minute resolution telemetry. It integrates physics-informed degradation, temperature-accelerated aging, and dynamic voltage modeling to support research in predictive maintenance, state-of-health estimation, remaining useful life prediction,
