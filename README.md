@@ -2,7 +2,33 @@
 LiionPro-DT is a high-fidelity synthetic lithium-ion battery digital twin dataset simulating five years of 1-minute resolution telemetry. It integrates physics-informed degradation, temperature-accelerated aging, and dynamic voltage modeling to support research in predictive maintenance, state-of-health estimation, remaining useful life prediction,
 
 ---
+Simulates 5 years of 1-minute resolution battery telemetry for academic research.
 
+Features:
+- Electrochemical degradation model (calendar + cycle + thermal aging)
+- Realistic State of Charge (SoC) and State of Health (SoH) evolution
+- Fault flags for over-voltage, under-voltage, and over-temperature
+- Rolling statistics and gradient features for ML/anomaly detection
+- Normalized Remaining Useful Life (RUL) target variable
+
+Typical Use Cases:
+- Battery Management System (BMS) modelling
+- Predictive maintenance & RUL estimation
+- Anomaly / fault detection
+- Time-series classification and regression benchmarks
+
+Output CSV columns (26 total):
+  timestamp, ambient_temp_C, battery_temp_C, current_A, voltage_V,
+  soc_%, soh_%, capacity_Ah, internal_resistance_ohm, cycle_count,
+  calendar_aging_%, cycle_aging_%, temperature_stress_%, RUL_normalized,
+  over_voltage_flag, under_voltage_flag, over_temperature_flag,
+  voltage_roll_mean, voltage_roll_std, current_roll_mean, current_roll_std,
+  temp_roll_mean, temp_roll_std, dV_dt, dT_dt, dSoC_dt,
+  power_W, energy_Wh_cumulative
+
+Author : (Darshan Kumar Govindaraju)
+License: MIT
+"""
 ##  Table of Contents
 
 - [Overview](#overview)
@@ -44,7 +70,9 @@ The output is a single `.csv` file with **~2.6 million rows** and **26 columns**
 | File size (approx.) | ~500 MB |
 | Format | CSV |
 
-> **Note:** Due to GitHub's file size limit, the dataset CSV may be hosted on a separate platform (e.g., Google Drive, Kaggle, Zenodo). See the [Releases](../../releases) section or the link below.
+> **Note:** Due to GitHub's file size limit, the dataset CSV may be hosted on a separate platform
+>https://www.kaggle.com/datasets/darshangovindaraju/liionpro-dt-lithium-ion-battery
+> 
 
 ---
 
@@ -106,8 +134,8 @@ The output is a single `.csv` file with **~2.6 million rows** and **26 columns**
 
 ```bash
 # Clone the repository
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
+git clone https://github.com/darshankumargovindaraju/LiionPro-DT-Lithium-Ion-Prognostics-Digital-Twin-Dataset-5-Year-EV-Pack-Simulation-.git
+cd LiionPro-DT-Lithium-Ion-Prognostics-Digital-Twin-Dataset-5-Year-EV-Pack-Simulation-
 
 # Install dependencies
 pip install numpy pandas
