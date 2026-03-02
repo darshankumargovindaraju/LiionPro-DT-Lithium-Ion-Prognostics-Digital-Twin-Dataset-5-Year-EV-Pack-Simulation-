@@ -257,7 +257,7 @@ If you use this dataset or code in your academic work, please cite:
   title     = LiionPro-DT-Lithium-Ion-Prognostics-Digital-Twin-Dataset-5-Year-EV-Pack-Simulation},
   year      = {2026},
   publisher = {GitHub},
-  url       = {https://github.com/<your-username>/<repo-name>}
+  url       = {[https://github.com/<your-username>/<repo-name>](https://github.com/darshankumargovindaraju/LiionPro-DT-Lithium-Ion-Prognostics-Digital-Twin-Dataset-5-Year-EV-Pack-Simulation-)}
 }
 ```
 
